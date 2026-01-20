@@ -47,8 +47,8 @@ body {
 
 /* ABOUT CARD (UPDATED AS PER IMAGE) */
 .about-card {
-  max-width: 780px;          /* chodaayi kam */
-  padding: 40px 42px;       /* vertical feel */
+  max-width: 480px;          /* chodaayi kam */
+  padding: 30px 32px;       /* vertical feel */
   text-align: left;
 }
 
@@ -272,3 +272,4 @@ footer {
     padding: 30px;
   }
 }
+
