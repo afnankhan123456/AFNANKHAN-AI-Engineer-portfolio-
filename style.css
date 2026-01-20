@@ -42,13 +42,14 @@ body {
 .top-about {
   display: flex;
   justify-content: center;
-  padding: 70px 20px;
+  padding: 70px 0; /* left-right padding removed */
 }
 
-/* ABOUT CARD (UPDATED AS PER IMAGE) */
+/* ================= TOP ABOUT CARD ================= */
 .about-card {
-  max-width: 480px;          /* chodaayi kam */
-  padding: 30px 32px;       /* vertical feel */
+  width: calc(100% - 2in);  /* left + right = 1 inch gap */
+  max-width: 1200px;       /* horizontally long */
+  padding: 26px 48px;      /* less height, more horizontal feel */
   text-align: left;
 }
 
@@ -268,8 +269,7 @@ footer {
   }
 
   .about-card {
-    max-width: 100%;
+    width: calc(100% - 40px); /* mobile safe gap */
     padding: 30px;
   }
 }
-
