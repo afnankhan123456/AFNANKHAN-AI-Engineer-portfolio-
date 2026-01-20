@@ -38,21 +38,27 @@ body {
     inset 0 0 1px rgba(255,255,255,0.35);
 }
 
-/* ================= TOP ABOUT (HERO CANVAS) ================= */
+/* ================= TOP CANVAS (HARD FIX) ================= */
 .top-about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  padding: 70px 0 120px;   /* ⬅️ EXTRA BOTTOM SPACE */
+  display: block;              /* ❗ flex hata diya */
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 220px;       /* 🔥 LARGE RESERVED SPACE */
 }
 
-/* ================= TOP ABOUT CARD ================= */
+/* ================= NAME (TOP) ================= */
+.top-name {
+  width: calc(100% - 2in);
+  max-width: 1200px;
+  margin: 0 auto 24px;
+}
+
+/* ================= ABOUT CARD ================= */
 .about-card {
   width: calc(100% - 2in);
   max-width: 1200px;
   margin: 0 auto;
-  padding: 26px 48px;
+  padding: 30px 52px;
   text-align: left;
 }
 
@@ -73,18 +79,16 @@ body {
 .about-card p {
   font-size: 15px;
   line-height: 1.7;
-  margin-bottom: 22px;
   opacity: 0.9;
 }
 
-/* ================= MAIN LAYOUT ================= */
+/* ================= MAIN CONTENT ================= */
 .main-layout {
   display: flex;
   gap: 32px;
   max-width: 1200px;
-
-  margin: 80px auto 0;   /* 🔥 CRITICAL FIX */
-  padding: 20px;
+  margin: 0 auto;              /* ❗ no overlap possible */
+  padding: 40px 20px 20px;     /* clear separation */
 }
 
 /* ================= SKILLS ================= */
@@ -109,7 +113,7 @@ body {
   text-align: center;
   font-size: 14px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255,255,255,0.08);
 }
 
 /* ================= PROJECTS ================= */
@@ -130,11 +134,14 @@ footer {
 @media (max-width: 900px) {
   .main-layout {
     flex-direction: column;
-    margin-top: 40px;
   }
 
-  .about-card {
+  .about-card,
+  .top-name {
     width: calc(100% - 40px);
-    padding: 30px;
+  }
+
+  .top-about {
+    padding-bottom: 120px;   /* mobile safe */
   }
 }
