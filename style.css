@@ -25,18 +25,27 @@ h2 {
   color: #22d3ee;
 }
 
-/* ---------- SKILLS (LEFT VERTICAL CARD) ---------- */
+/* ---------- SKILLS (FIXED + TRANSPARENT) ---------- */
 .skills {
   position: fixed;
   left: 20px;
   top: 120px;
   width: 220px;
-  background: #020617;
+
+  background: rgba(2, 6, 23, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
   padding: 25px;
   border-radius: 18px;
-  box-shadow: 0 0 25px rgba(34, 211, 238, 0.15);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.25);
+
+  z-index: 1000;
 }
 
+/* ---------- SKILL LIST ---------- */
 .skill-list {
   display: flex;
   flex-direction: column;
@@ -47,7 +56,8 @@ h2 {
   display: block;
   text-align: center;
   padding: 10px;
-  background: #1e293b;
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(6px);
   border-radius: 20px;
   font-size: 14px;
 }
@@ -63,10 +73,12 @@ h2 {
   padding: 30px;
   border-radius: 18px;
   margin-top: 20px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+
   box-shadow: 0 0 25px rgba(99, 102, 241, 0.15);
 }
 
