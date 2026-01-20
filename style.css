@@ -25,11 +25,11 @@ h2 {
   color: #22d3ee;
 }
 
-/* ---------- SKILLS (FIXED + TRANSPARENT) ---------- */
+/* ---------- SKILLS (STICKY + TRANSPARENT) ---------- */
 .skills {
-  position: fixed;
-  left: 20px;
-  top: 120px;
+  position: sticky;          /* 🔑 MAIN FIX */
+  top: 120px;                /* header ke baad rukega */
+  float: left;
   width: 220px;
 
   background: rgba(2, 6, 23, 0.55);
@@ -41,8 +41,6 @@ h2 {
 
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 0 30px rgba(34, 211, 238, 0.25);
-
-  z-index: 1000;
 }
 
 /* ---------- SKILL LIST ---------- */
@@ -57,14 +55,13 @@ h2 {
   text-align: center;
   padding: 10px;
   background: rgba(30, 41, 59, 0.7);
-  backdrop-filter: blur(6px);
   border-radius: 20px;
   font-size: 14px;
 }
 
 /* ---------- PROJECTS (RIGHT SIDE) ---------- */
 .projects {
-  margin-left: 280px;
+  margin-left: 260px;
   text-align: left;
 }
 
@@ -128,6 +125,7 @@ footer {
   .skills {
     position: static;
     width: auto;
+    float: none;
     margin-bottom: 30px;
   }
 
