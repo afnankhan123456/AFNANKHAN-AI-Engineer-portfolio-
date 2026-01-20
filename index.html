@@ -1,56 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>AFNANKHAN | AI Engineer</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-  <h1>AFNANKHAN</h1>
-  <p>AI Engineer | Machine Learning | Computer Vision</p>
+<!-- ================= TOP : ABOUT CARD ================= -->
+<header class="top-about">
+  <div class="about-card glass">
+    <h1>AFNANKHAN</h1>
+    <h3>AI Engineer / Data Scientist</h3>
+    <p>
+      I design and build real-world AI & ML systems focused on
+      Computer Vision, Deep Learning, and scalable AI web apps.
+    </p>
+  </div>
 </header>
 
-<section class="about">
-  <h2>About Me</h2>
-  <p>
-    I am an AI Engineer working on real-world AI web applications like
-    Emotion Detection using Deep Learning, Flask, and OpenCV.
-  </p>
-</section>
+<!-- ================= MAIN BODY ================= -->
+<main class="main-layout">
 
-<section class="skills">
-  <h2>Skills</h2>
-  <div class="skill-list">
-    <span>Python</span>
-    <span>Machine Learning</span>
-    <span>Deep Learning</span>
-    <span>Flask</span>
-    <span>OpenCV</span>
-    <span>TensorFlow</span>
-  </div>
-</section>
-
-<section class="projects">
-  <h2>Projects</h2>
-
-  <div class="project-card">
-    <h3>Emotion Detection Web App</h3>
-    <p>
-      Real-time facial emotion detection using CNN, OpenCV, and Flask.
-    </p>
-
-    <div class="buttons">
-      <a href="#" class="btn live">Live Demo</a>
-      <a href="#" class="btn code">GitHub</a>
+  <!-- LEFT : SKILLS -->
+  <aside class="skills glass">
+    <h2>Skills</h2>
+    <div class="skill-list">
+      <span>Python</span>
+      <span>Machine Learning</span>
+      <span>Deep Learning</span>
+      <span>TensorFlow</span>
+      <span>Flask</span>
+      <span>OpenCV</span>
+      <span>SQL</span>
+      <span>Computer Vision</span>
     </div>
+  </aside>
+
+  <!-- RIGHT : PROJECTS -->
+  <section class="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card glass">
+      <div class="project-content">
+        <h3>Emotion Detection Web App</h3>
+        <p>
+          Real-time facial emotion recognition system using CNN models
+          deployed with Flask and OpenCV.
+        </p>
+
+        <div class="tech">
+          <span>Python</span>
+          <span>TensorFlow</span>
+          <span>OpenCV</span>
+          <span>Flask</span>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <a href="#" class="btn live">Live Demo</a>
+        <a href="#" class="btn code">GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card glass">
+      <div class="project-content">
+        <h3>Fake News Detection</h3>
+        <p>
+          NLP-based ML pipeline to classify news as real or fake
+          using supervised learning models.
+        </p>
+
+        <div class="tech">
+          <span>Python</span>
+          <span>NLP</span>
+          <span>Scikit-Learn</span>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <a href="#" class="btn live">Live Demo</a>
+        <a href="#" class="btn code">GitHub</a>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<!-- ================= BOTTOM ================= -->
+<section class="bottom-section">
+  <div class="glass summary">
+    <h2>Summary</h2>
+    <p>
+      AI Engineer specializing in ML & Deep Learning with a strong focus
+      on production-ready AI systems, clean architecture, and performance.
+    </p>
   </div>
 
+  <div class="glass contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
 </section>
 
 <footer>
-  <p>© 2026 AFNANKHAN | AI Portfolio</p>
+  © 2026 AFNANKHAN — AI Portfolio
 </footer>
 
 </body>
