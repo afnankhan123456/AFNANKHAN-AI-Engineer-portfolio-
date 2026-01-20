@@ -16,7 +16,7 @@ header {
 /* ---------- SECTION ---------- */
 section {
   padding: 50px 20px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -25,11 +25,12 @@ h2 {
   color: #22d3ee;
 }
 
-/* ---------- SKILLS (NORMAL SCROLL + TRANSPARENT) ---------- */
+/* ================= LAYOUT ================= */
+
+/* LEFT : SKILLS */
 .skills {
-  position: relative;        /* 🔑 MAIN FIX */
+  width: 240px;
   float: left;
-  width: 220px;
 
   background: rgba(2, 6, 23, 0.55);
   backdrop-filter: blur(12px);
@@ -37,91 +38,101 @@ h2 {
 
   padding: 25px;
   border-radius: 18px;
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 25px rgba(34, 211, 238, 0.2);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 0 25px rgba(34,211,238,0.18);
 }
 
-/* ---------- SKILL LIST ---------- */
+/* Skills list vertical */
 .skill-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .skill-list span {
-  display: block;
   text-align: center;
   padding: 10px;
-  background: rgba(30, 41, 59, 0.7);
+  background: rgba(30,41,59,0.7);
   border-radius: 20px;
   font-size: 14px;
 }
 
-/* ---------- PROJECTS (RIGHT SIDE) ---------- */
+/* RIGHT : PROJECTS */
 .projects {
-  margin-left: 260px;
-  text-align: left;
+  margin-left: 280px;   /* pushes projects to right */
 }
 
+/* ---------- PROJECT CARD (HORIZONTAL) ---------- */
 .project-card {
-  background: #1e293b;
-  padding: 30px;
-  border-radius: 18px;
-  margin-top: 20px;
-
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 20px;
 
-  box-shadow: 0 0 25px rgba(99, 102, 241, 0.15);
+  background: rgba(30,41,59,0.75);
+  backdrop-filter: blur(10px);
+
+  padding: 22px;
+  border-radius: 18px;
+  margin-bottom: 22px;
+
+  box-shadow: 0 0 25px rgba(99,102,241,0.18);
 }
 
+/* Project image/icon (agar hai) */
+.project-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* Project text */
 .project-card h3 {
-  margin: 0 0 8px 0;
+  margin: 0 0 6px 0;
 }
 
 .project-card p {
   margin: 0;
-  max-width: 70%;
+  font-size: 14px;
+  opacity: 0.85;
 }
 
 /* ---------- BUTTONS ---------- */
 .buttons {
+  margin-left: auto;
   display: flex;
   gap: 10px;
 }
 
 .btn {
   text-decoration: none;
-  padding: 10px 18px;
+  padding: 10px 16px;
   border-radius: 8px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .live {
   background: #22d3ee;
-  color: black;
+  color: #000;
 }
 
 .code {
   background: #6366f1;
-  color: white;
+  color: #fff;
 }
 
 /* ---------- FOOTER ---------- */
 footer {
+  clear: both;
   text-align: center;
   padding: 20px;
   background: #020617;
   margin-top: 60px;
-  clear: both;
 }
 
 /* ---------- RESPONSIVE ---------- */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .skills {
     float: none;
     width: auto;
@@ -137,7 +148,7 @@ footer {
     align-items: flex-start;
   }
 
-  .project-card p {
-    max-width: 100%;
+  .buttons {
+    margin-left: 0;
   }
 }
