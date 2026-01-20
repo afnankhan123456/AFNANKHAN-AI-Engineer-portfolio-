@@ -38,15 +38,13 @@ body {
     inset 0 0 1px rgba(255,255,255,0.35);
 }
 
-/* ================= TOP ABOUT (CANVAS FIX) ================= */
+/* ================= TOP ABOUT (HERO CANVAS) ================= */
 .top-about {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  padding: 70px 0;
-
-  min-height: 420px;   /* 🔥 KEY FIX: canvas height increased */
+  padding: 70px 0 120px;   /* ⬅️ EXTRA BOTTOM SPACE */
 }
 
 /* ================= TOP ABOUT CARD ================= */
@@ -84,7 +82,8 @@ body {
   display: flex;
   gap: 32px;
   max-width: 1200px;
-  margin: auto;
+
+  margin: 80px auto 0;   /* 🔥 CRITICAL FIX */
   padding: 20px;
 }
 
@@ -131,14 +130,11 @@ footer {
 @media (max-width: 900px) {
   .main-layout {
     flex-direction: column;
+    margin-top: 40px;
   }
 
   .about-card {
     width: calc(100% - 40px);
     padding: 30px;
-  }
-
-  .top-about {
-    min-height: auto; /* mobile pe natural height */
   }
 }
