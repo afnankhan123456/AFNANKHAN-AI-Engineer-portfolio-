@@ -1,51 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>AFNANKHAN | AI Engineer</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header class="hero">
-  <h1>AFNANKHAN</h1>
-  <p>AI Engineer | Machine Learning | Computer Vision</p>
-</header>
-
-<section class="about">
-  <h2>About Me</h2>
-  <p>
-    I am an AI Engineer working on real-world AI web applications and
-    machine learning projects with practical deployment experience.
-  </p>
-</section>
-
-<!-- SKILLS + PROJECTS WRAPPER -->
 <section class="work-layout">
 
-  <!-- LEFT : SKILLS -->
-  <div class="skills vertical">
+  <!-- LEFT : SKILLS (SINGLE CARD) -->
+  <aside class="skills-card">
     <h2>Skills</h2>
-    <div class="skill-list vertical-list">
-      <span>Python</span>
-      <span>Machine Learning</span>
-      <span>Deep Learning</span>
-      <span>Flask</span>
-      <span>OpenCV</span>
-      <span>TensorFlow</span>
-      <span>MySQL</span>
-      <span>BigQuery</span>
-      <span>NLP</span>
-      <span>Streamlit</span>
-    </div>
-  </div>
+    <ul class="skills-vertical">
+      <li>Python</li>
+      <li>Machine Learning</li>
+      <li>Deep Learning</li>
+      <li>Flask</li>
+      <li>OpenCV</li>
+      <li>TensorFlow</li>
+      <li>MySQL</li>
+      <li>BigQuery</li>
+      <li>NLP</li>
+      <li>Streamlit</li>
+    </ul>
+  </aside>
 
   <!-- RIGHT : PROJECTS -->
-  <div class="projects horizontal">
+  <main class="projects-area">
     <h2>Projects</h2>
 
     <div class="project-card horizontal-card">
-      <div>
+      <div class="project-info">
         <h3>Height Prediction App</h3>
         <p>Machine learning based web app to predict height using user input.</p>
       </div>
@@ -55,7 +32,7 @@
     </div>
 
     <div class="project-card horizontal-card">
-      <div>
+      <div class="project-info">
         <h3>Heart Failure Prediction App</h3>
         <p>ML model to predict heart failure risk using medical parameters.</p>
       </div>
@@ -64,13 +41,15 @@
          target="_blank">Live Demo</a>
     </div>
 
-  </div>
+    <div class="project-card horizontal-card">
+      <div class="project-info">
+        <h3>Emotion Detection Web App</h3>
+        <p>Emotion detection app improved with CNNs and OpenCV.</p>
+      </div>
+      <a href="#"
+         class="btn">Live Demo</a>
+    </div>
+
+  </main>
 
 </section>
-
-<footer>
-  <p>© 2026 AFNANKHAN | AI Portfolio</p>
-</footer>
-
-</body>
-</html>
