@@ -45,10 +45,10 @@ body {
   text-decoration: none;
 }
 
-/* HERO */
+/* HERO — 🔴 ROOT CAUSE FIX HERE */
 .hero {
   text-align: center;
-  padding: 40px 20px 60px;
+  padding: 40px 20px 24px; /* ❗ bottom padding 60px → 24px */
 }
 
 .profile-img {
@@ -60,8 +60,7 @@ body {
 
 /* ABOUT */
 .top-about {
-  padding-top: 0;          /* 🔧 extra gap hata diya */
-  padding-bottom: 0;
+  padding: 0; /* ❗ extra gap removed */
 }
 
 .about-wrapper {
@@ -72,8 +71,8 @@ body {
 
 /* PHOTO FRAME */
 .about-photo-container {
-  margin-top: 24px;        /* HERO → PHOTO (half inch) */
-  margin-bottom: 24px;    /* PHOTO → ABOUT CARD (half inch) */
+  margin-top: 24px;     /* HERO → PHOTO */
+  margin-bottom: 24px;  /* PHOTO → ABOUT */
 }
 
 .about-photo-frame {
@@ -87,7 +86,7 @@ body {
   justify-content: center;
 }
 
-/* glass radius override */
+/* override glass radius */
 .about-photo-frame.glass {
   border-radius: 50% !important;
 }
@@ -103,7 +102,7 @@ body {
 .about-card {
   padding: 42px;
   text-align: center;
-  margin-bottom: 24px;    /* ABOUT → SKILLS/PROJECTS (half inch) */
+  margin-bottom: 24px; /* ABOUT → SKILLS/PROJECTS */
 }
 
 /* MAIN LAYOUT */
@@ -111,7 +110,7 @@ body {
   display: flex;
   gap: 32px;
   max-width: 1500px;
-  margin: 24px auto;      /* ABOUT → MAIN LAYOUT gap fixed */
+  margin: 24px auto;   /* half-inch gap */
   padding: 0 20px;
 }
 
