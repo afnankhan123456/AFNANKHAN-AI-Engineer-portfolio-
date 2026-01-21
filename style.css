@@ -34,6 +34,20 @@ body {
   margin: 20px;
 }
 
+.nav-center {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.resume-btn {
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  text-decoration: none;
+}
+
 /* ================= HERO ================= */
 .hero {
   text-align: center;
@@ -58,7 +72,20 @@ body {
   text-align: center;
 }
 
-/* ================= MAIN LAYOUT ================= */
+.chip-row {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.chip {
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(99,102,241,0.25);
+}
+
+/* ================= MAIN ================= */
 .main-layout {
   display: flex;
   gap: 32px;
@@ -73,10 +100,39 @@ body {
   padding: 28px;
 }
 
-/* 🔥 ONLY NEW CHANGE (THIS FIXES THE ISSUE) */
 .skill-list {
   display: flex;
   flex-direction: column;
+  gap: 14px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 12px 16px;
+  border-radius: 14px;
+
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(99,102,241,0.35);
+}
+
+.skill-item img {
+  width: 28px;
+  height: 28px;
+}
+
+.skill-item span {
+  font-size: 14px;
+  font-weight: 500;
 }
 
 /* ================= PROJECTS ================= */
@@ -86,13 +142,11 @@ body {
   margin-right: 0.5in;
 }
 
-/* SAME HEIGHT */
 .skills,
 .projects {
   min-height: 420px;
 }
 
-/* ================= PROJECT LIST ================= */
 .project-list {
   display: flex;
   flex-direction: column;
@@ -100,7 +154,6 @@ body {
   margin-top: 18px;
 }
 
-/* ================= PROJECT CARD ================= */
 .project-card {
   padding: 20px;
   border-radius: 18px;
@@ -111,6 +164,31 @@ body {
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 45px rgba(99,102,241,0.35);
+}
+
+/* ================= BUTTONS ================= */
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.btn {
+  padding: 9px 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.live {
+  background: linear-gradient(135deg, #22d3ee, #38bdf8);
+  color: #020617;
+}
+
+.code {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
 }
 
 /* ================= FOOTER ================= */
@@ -124,7 +202,6 @@ footer {
 @media (max-width: 900px) {
   .main-layout {
     flex-direction: column;
-    max-width: 100%;
   }
 
   .skills {
