@@ -34,20 +34,6 @@ body {
   margin: 20px;
 }
 
-.nav-center {
-  list-style: none;
-  display: flex;
-  gap: 28px;
-}
-
-.resume-btn {
-  padding: 10px 22px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  color: white;
-  text-decoration: none;
-}
-
 /* ================= HERO ================= */
 .hero {
   text-align: center;
@@ -72,24 +58,13 @@ body {
   text-align: center;
 }
 
-.chip-row {
-  margin-top: 22px;
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-}
-
-.chip {
-  padding: 8px 18px;
-  border-radius: 999px;
-  background: rgba(99,102,241,0.25);
-}
-
 /* ================= MAIN LAYOUT ================= */
+/* 🔥 CHANGE #1 — MAIN CONTAINER WIDER */
 .main-layout {
   display: flex;
   gap: 32px;
-  max-width: 1200px;
+
+  max-width: 1500px;   /* ⬅️ WAS 1200px */
   margin: 1in auto;
   padding: 0 20px;
 }
@@ -101,16 +76,15 @@ body {
 }
 
 /* ================= PROJECTS ================= */
+/* 🔥 CHANGE #2 — PROJECT CARD CAN NOW EXPAND */
 .projects {
   flex: 1;
-
-  /* 🔥 CHANGE #1: right gap HALF INCH */
-  margin-right: 0.5in;
-
   padding: 28px;
+
+  margin-right: 0.5in;
 }
 
-/* SAME HEIGHT FEEL */
+/* SAME HEIGHT */
 .skills,
 .projects {
   min-height: 420px;
@@ -137,31 +111,6 @@ body {
   box-shadow: 0 20px 45px rgba(99,102,241,0.35);
 }
 
-/* ================= BUTTONS ================= */
-.buttons {
-  display: flex;
-  gap: 12px;
-  margin-top: 14px;
-}
-
-.btn {
-  padding: 9px 16px;
-  border-radius: 12px;
-  font-size: 13px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.live {
-  background: linear-gradient(135deg, #22d3ee, #38bdf8);
-  color: #020617;
-}
-
-.code {
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  color: white;
-}
-
 /* ================= FOOTER ================= */
 footer {
   text-align: center;
@@ -173,6 +122,7 @@ footer {
 @media (max-width: 900px) {
   .main-layout {
     flex-direction: column;
+    max-width: 100%;
   }
 
   .skills {
