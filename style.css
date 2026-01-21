@@ -59,7 +59,7 @@ body {
 
 /* ABOUT */
 .top-about {
-  padding: 10px 0; /* about ke andar halka space */
+  padding: 10px 0;
 }
 
 .about-wrapper {
@@ -71,14 +71,28 @@ body {
 .about-card {
   padding: 42px;
   text-align: center;
+  position: relative; /* 👈 REQUIRED for absolute image */
 }
 
-/* MAIN LAYOUT (🔥 REAL FIX HERE 🔥) */
+/* ✅ ABOUT IMAGE STYLE (NEW) */
+.about-profile-img {
+  position: absolute;
+  top: -28px;
+  left: -28px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255,255,255,0.25);
+  background: #020617;
+}
+
+/* MAIN */
 .main-layout {
   display: flex;
   gap: 32px;
   max-width: 1500px;
-  margin: 14px auto;   /* 👈 HALF-INCH JAISE GAP */
+  margin: 14px auto;
   padding: 0 20px;
 }
 
@@ -198,5 +212,11 @@ footer {
   .scroll-skills {
     max-height: none;
   }
-}
 
+  /* mobile safe */
+  .about-profile-img {
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
