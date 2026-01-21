@@ -69,23 +69,22 @@ body {
   padding: 0 20px;
 }
 
-/* PHOTO FRAME — FINAL FIX */
+/* PHOTO FRAME — ONLY CHANGE HERE */
 .about-photo-container {
   margin-bottom: 28px;
+  margin-top: -2in; /* 👈 photo frame 2 inches upar */
 }
 
 .about-photo-frame {
   width: 140px;
-  height: 140px;                 /* ? SAME */
-  border-radius: 50% !important; /* ? FORCE PERFECT CIRCLE */
+  height: 140px;
+  border-radius: 50% !important;
   overflow: hidden;
-  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* glass ka radius yahin neutralize */
 .about-photo-frame.glass {
   border-radius: 50% !important;
 }
