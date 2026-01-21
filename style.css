@@ -69,9 +69,9 @@ body {
   padding: 0 20px;
 }
 
-/* PHOTO FRAME — NO CHANGE */
+/* PHOTO FRAME (NO EXTRA GAP) */
 .about-photo-container {
-  margin-bottom: 0;   /* ❗ ensure no extra gap */
+  margin-bottom: 0;
 }
 
 .about-photo-frame {
@@ -96,11 +96,16 @@ body {
   display: block;
 }
 
-/* ✅ REAL GAP CONTROL — ONLY THIS */
+/* ABOUT CARD */
 .about-card {
   padding: 42px;
   text-align: center;
-  margin-bottom: 10px;   /* ⬅️ HALF-INCH GAP HERE */
+}
+
+/* ✅ ONLY GAP FIX — DEFAULT H2 MARGIN OVERRIDE */
+.about-card h2 {
+  margin-top: 6px;   /* ⬅️ gap yahin se kam hota hai */
+  margin-bottom: 14px;
 }
 
 /* MAIN LAYOUT */
