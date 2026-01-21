@@ -59,7 +59,7 @@ body {
 
 /* ABOUT */
 .top-about {
-  padding: 10px 0; /* about ke andar halka space */
+  padding: 20px 0;
 }
 
 .about-wrapper {
@@ -68,17 +68,35 @@ body {
   padding: 0 20px;
 }
 
+/* PHOTO FRAME */
+.about-photo-container {
+  margin-bottom: 28px;
+}
+
+.about-photo-frame {
+  width: 130px;
+  height: 170px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.about-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .about-card {
   padding: 42px;
   text-align: center;
 }
 
-/* MAIN LAYOUT (?? REAL FIX HERE ??) */
+/* MAIN LAYOUT */
 .main-layout {
   display: flex;
   gap: 32px;
   max-width: 1500px;
-  margin: 14px auto;   /* ?? HALF-INCH JAISE GAP */
+  margin: 14px auto;
   padding: 0 20px;
 }
 
