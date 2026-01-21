@@ -59,12 +59,10 @@ body {
 }
 
 /* ================= MAIN LAYOUT ================= */
-/* 🔥 CHANGE #1 — MAIN CONTAINER WIDER */
 .main-layout {
   display: flex;
   gap: 32px;
-
-  max-width: 1500px;   /* ⬅️ WAS 1200px */
+  max-width: 1500px;
   margin: 1in auto;
   padding: 0 20px;
 }
@@ -75,12 +73,16 @@ body {
   padding: 28px;
 }
 
+/* 🔥 ONLY NEW CHANGE (THIS FIXES THE ISSUE) */
+.skill-list {
+  display: flex;
+  flex-direction: column;
+}
+
 /* ================= PROJECTS ================= */
-/* 🔥 CHANGE #2 — PROJECT CARD CAN NOW EXPAND */
 .projects {
   flex: 1;
   padding: 28px;
-
   margin-right: 0.5in;
 }
 
