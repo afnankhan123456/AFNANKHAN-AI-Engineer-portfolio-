@@ -82,9 +82,9 @@ body {
   padding: 0 20px;
 }
 
-/* 🔥 SKILLS — FIXED */
+/* SKILLS */
 .skills {
-  width: 320px;          /* back to normal */
+  width: 320px;
   padding: 22px;
 }
 
@@ -92,6 +92,21 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.scroll-skills {
+  max-height: 360px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.scroll-skills::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scroll-skills::-webkit-scrollbar-thumb {
+  background: rgba(99,102,241,0.6);
+  border-radius: 10px;
 }
 
 .skill-item {
@@ -105,7 +120,7 @@ body {
 }
 
 .skill-item img {
-  width: 22px;           /* ICON SIZE FIXED */
+  width: 22px;
   height: 22px;
 }
 
@@ -113,7 +128,7 @@ body {
   font-size: 13px;
 }
 
-/* PROJECTS — AS IT IS */
+/* PROJECTS */
 .projects {
   flex: 1;
   padding: 28px;
@@ -178,7 +193,8 @@ footer {
     height: auto;
   }
 
-  .scroll-area {
+  .scroll-area,
+  .scroll-skills {
     max-height: none;
   }
 }
