@@ -31,25 +31,10 @@ body {
   margin: 20px;
 }
 
-.nav-center {
-  list-style: none;
-  display: flex;
-  gap: 28px;
-}
-
-.resume-btn {
-  padding: 10px 22px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  color: white;
-  text-decoration: none;
-}
-
 /* HERO */
-/* 🔴 SIRF YAHAN GAP KAM KIYA (60px → 20px) */
 .hero {
   text-align: center;
-  padding: 40px 20px 20px;
+  padding: 40px 20px 20px; /* bottom reduced */
 }
 
 .profile-img {
@@ -60,8 +45,10 @@ body {
 }
 
 /* ABOUT */
+/* 🔥 REAL FIX: hero ke paas pull */
 .top-about {
-  padding: 20px 0; /* SAME */
+  margin-top: -30px;   /* ⬅️ THIS is the key */
+  padding: 0;
 }
 
 .about-wrapper {
@@ -71,10 +58,9 @@ body {
 }
 
 /* PHOTO FRAME */
-/* 🔴 SIRF GAP KAM (28px → 16px) */
 .about-photo-container {
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 .about-photo-frame {
@@ -82,13 +68,11 @@ body {
   height: 140px;
   border-radius: 50% !important;
   overflow: hidden;
-  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* glass ka radius neutralize */
 .about-photo-frame.glass {
   border-radius: 50% !important;
 }
@@ -97,15 +81,13 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
 /* ABOUT CARD */
-/* 🔴 SIRF NICHE KA GAP ADD KIYA */
 .about-card {
   padding: 42px;
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 /* MAIN LAYOUT */
@@ -113,7 +95,7 @@ body {
   display: flex;
   gap: 32px;
   max-width: 1500px;
-  margin: 14px auto; /* SAME */
+  margin: 12px auto;
   padding: 0 20px;
 }
 
@@ -123,46 +105,6 @@ body {
   padding: 22px;
 }
 
-.skill-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.scroll-skills {
-  max-height: 360px;
-  overflow-y: auto;
-  padding-right: 6px;
-}
-
-.scroll-skills::-webkit-scrollbar {
-  width: 5px;
-}
-
-.scroll-skills::-webkit-scrollbar-thumb {
-  background: rgba(99,102,241,0.6);
-  border-radius: 10px;
-}
-
-.skill-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 14px;
-  border-radius: 14px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
-}
-
-.skill-item img {
-  width: 22px;
-  height: 22px;
-}
-
-.skill-item span {
-  font-size: 13px;
-}
-
 /* PROJECTS */
 .projects {
   flex: 1;
@@ -170,45 +112,7 @@ body {
   height: 520px;
 }
 
-.scroll-area {
-  margin-top: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  max-height: 420px;
-  overflow-y: auto;
-}
-
-.project-card {
-  padding: 20px;
-  border-radius: 18px;
-  background: rgba(255,255,255,0.08);
-}
-
-.buttons {
-  display: flex;
-  gap: 12px;
-  margin-top: 14px;
-}
-
-.btn {
-  padding: 9px 16px;
-  border-radius: 12px;
-  font-size: 13px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.live {
-  background: linear-gradient(135deg, #22d3ee, #38bdf8);
-  color: #020617;
-}
-
-.code {
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  color: white;
-}
-
+/* FOOTER */
 footer {
   text-align: center;
   padding: 22px;
@@ -217,21 +121,16 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .main-layout {
-    flex-direction: column;
-    margin: 16px auto;
+  .top-about {
+    margin-top: -20px; /* mobile safe */
   }
 
-  .skills {
-    width: 100%;
+  .main-layout {
+    flex-direction: column;
+    margin: 12px auto;
   }
 
   .projects {
     height: auto;
-  }
-
-  .scroll-area,
-  .scroll-skills {
-    max-height: none;
   }
 }
