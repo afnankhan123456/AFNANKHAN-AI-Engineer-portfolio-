@@ -69,15 +69,16 @@ body {
   padding: 0 20px;
 }
 
-/* PHOTO FRAME — ONLY CHANGE HERE */
+/* PHOTO FRAME — UPDATED */
 .about-photo-container {
   margin-bottom: 28px;
-  margin-top: -2in; /* 👈 photo frame 2 inches upar */
+  margin-top: -2in;     /* photo 2 inches upar */
+  margin-left: 1in;    /* left se 1 inch gap */
 }
 
 .about-photo-frame {
-  width: 140px;
-  height: 140px;
+  width: 170px;        /* size bada */
+  height: 170px;       /* size bada */
   border-radius: 50% !important;
   overflow: hidden;
   display: flex;
