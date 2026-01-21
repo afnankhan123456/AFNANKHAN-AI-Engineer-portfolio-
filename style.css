@@ -31,24 +31,10 @@ body {
   margin: 20px;
 }
 
-.nav-center {
-  list-style: none;
-  display: flex;
-  gap: 28px;
-}
-
-.resume-btn {
-  padding: 10px 22px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  color: white;
-  text-decoration: none;
-}
-
-/* HERO — 🔴 ROOT CAUSE FIX HERE */
+/* HERO — HARD GAP CUT */
 .hero {
   text-align: center;
-  padding: 40px 20px 24px; /* ❗ bottom padding 60px → 24px */
+  padding: 32px 20px 12px;   /* ⬅️ bottom gap aur kam */
 }
 
 .profile-img {
@@ -60,7 +46,7 @@ body {
 
 /* ABOUT */
 .top-about {
-  padding: 0; /* ❗ extra gap removed */
+  padding: 0;              /* ⬅️ zero */
 }
 
 .about-wrapper {
@@ -69,10 +55,10 @@ body {
   padding: 0 20px;
 }
 
-/* PHOTO FRAME */
+/* PHOTO FRAME — VERY CLOSE */
 .about-photo-container {
-  margin-top: 24px;     /* HERO → PHOTO */
-  margin-bottom: 24px;  /* PHOTO → ABOUT */
+  margin-top: 12px;        /* HERO → PHOTO */
+  margin-bottom: 12px;     /* PHOTO → ABOUT */
 }
 
 .about-photo-frame {
@@ -80,13 +66,11 @@ body {
   height: 140px;
   border-radius: 50% !important;
   overflow: hidden;
-  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* override glass radius */
 .about-photo-frame.glass {
   border-radius: 50% !important;
 }
@@ -95,22 +79,21 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
-/* ABOUT CARD */
+/* ABOUT CARD — TIGHT */
 .about-card {
-  padding: 42px;
+  padding: 36px;           /* ⬅️ thoda kam */
   text-align: center;
-  margin-bottom: 24px; /* ABOUT → SKILLS/PROJECTS */
+  margin-bottom: 12px;     /* ABOUT → SKILLS */
 }
 
-/* MAIN LAYOUT */
+/* MAIN LAYOUT — TIGHT */
 .main-layout {
   display: flex;
   gap: 32px;
   max-width: 1500px;
-  margin: 24px auto;   /* half-inch gap */
+  margin: 12px auto;       /* ⬅️ very small */
   padding: 0 20px;
 }
 
@@ -126,40 +109,6 @@ body {
   gap: 12px;
 }
 
-.scroll-skills {
-  max-height: 360px;
-  overflow-y: auto;
-  padding-right: 6px;
-}
-
-.scroll-skills::-webkit-scrollbar {
-  width: 5px;
-}
-
-.scroll-skills::-webkit-scrollbar-thumb {
-  background: rgba(99,102,241,0.6);
-  border-radius: 10px;
-}
-
-.skill-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 14px;
-  border-radius: 14px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
-}
-
-.skill-item img {
-  width: 22px;
-  height: 22px;
-}
-
-.skill-item span {
-  font-size: 13px;
-}
-
 /* PROJECTS */
 .projects {
   flex: 1;
@@ -167,45 +116,7 @@ body {
   height: 520px;
 }
 
-.scroll-area {
-  margin-top: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  max-height: 420px;
-  overflow-y: auto;
-}
-
-.project-card {
-  padding: 20px;
-  border-radius: 18px;
-  background: rgba(255,255,255,0.08);
-}
-
-.buttons {
-  display: flex;
-  gap: 12px;
-  margin-top: 14px;
-}
-
-.btn {
-  padding: 9px 16px;
-  border-radius: 12px;
-  font-size: 13px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.live {
-  background: linear-gradient(135deg, #22d3ee, #38bdf8);
-  color: #020617;
-}
-
-.code {
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  color: white;
-}
-
+/* FOOTER */
 footer {
   text-align: center;
   padding: 22px;
@@ -216,19 +127,10 @@ footer {
 @media (max-width: 900px) {
   .main-layout {
     flex-direction: column;
-    margin: 24px auto;
-  }
-
-  .skills {
-    width: 100%;
+    margin: 12px auto;
   }
 
   .projects {
     height: auto;
-  }
-
-  .scroll-area,
-  .scroll-skills {
-    max-height: none;
   }
 }
