@@ -7,21 +7,37 @@
 
 /* ================= BODY ================= */
 body {
-  font-family: Inter, Segoe UI, sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   color: #e5e7eb;
+  min-height: 100vh;
+
   background:
-    radial-gradient(circle at top left, rgba(124,58,237,0.35), transparent 40%),
-    radial-gradient(circle at bottom right, rgba(59,130,246,0.35), transparent 40%),
-    linear-gradient(180deg, #0b1026, #050816);
+    radial-gradient(circle at top left,
+      rgba(124, 58, 237, 0.35),
+      transparent 40%),
+    radial-gradient(circle at bottom right,
+      rgba(59, 130, 246, 0.35),
+      transparent 40%),
+    linear-gradient(
+      180deg,
+      #0b1026 0%,
+      #0a0f2c 45%,
+      #050816 100%
+    );
 }
 
-/* ================= GLASS ================= */
+/* ================= GLASS BASE ================= */
 .glass {
-  background: rgba(255,255,255,0.06);
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(18px);
-  border: 1px solid rgba(255,255,255,0.12);
+  -webkit-backdrop-filter: blur(18px);
+
   border-radius: 22px;
-  box-shadow: 0 15px 45px rgba(0,0,0,0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.45),
+    inset 0 0 1px rgba(255,255,255,0.35);
 }
 
 /* ================= NAVBAR ================= */
@@ -29,33 +45,46 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 40px;
-  margin: 20px;
+
+  padding: 18px 42px;
+  margin: 22px;
+}
+
+.nav-left {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .nav-center {
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 28px;
 }
 
 .nav-center li {
   cursor: pointer;
   opacity: 0.85;
+  transition: opacity 0.25s ease;
+}
+
+.nav-center li:hover {
+  opacity: 1;
 }
 
 .resume-btn {
   padding: 10px 22px;
   border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+
   background: linear-gradient(135deg, #6366f1, #8b5cf6);
   color: white;
-  text-decoration: none;
 }
 
 /* ================= HERO ================= */
 .hero {
   text-align: center;
-  padding: 40px 20px;
+  padding: 40px 20px 60px;
 }
 
 .profile-img {
@@ -66,7 +95,17 @@ body {
   margin-bottom: 16px;
 }
 
-/* ================= ABOUT ================= */
+.hero h1 {
+  font-size: 44px;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  margin-top: 6px;
+  color: #a5b4fc;
+}
+
+/* ================= TOP ABOUT ================= */
 .top-about {
   padding: 60px 1in;
 }
@@ -76,21 +115,34 @@ body {
   text-align: center;
 }
 
+.about-card h2 {
+  margin-bottom: 14px;
+  color: #38bdf8;
+}
+
+.about-card p {
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
 .chip-row {
-  margin-top: 22px;
+  margin-top: 24px;
   display: flex;
   justify-content: center;
-  gap: 14px;
   flex-wrap: wrap;
+  gap: 14px;
 }
 
 .chip {
   padding: 8px 18px;
   border-radius: 999px;
+  font-size: 14px;
+
   background: rgba(99,102,241,0.25);
+  border: 1px solid rgba(255,255,255,0.15);
 }
 
-/* ================= MAIN ================= */
+/* ================= MAIN LAYOUT ================= */
 .main-layout {
   display: flex;
   gap: 32px;
@@ -99,9 +151,15 @@ body {
   padding: 0 20px;
 }
 
+/* ================= SKILLS ================= */
 .skills {
   width: 260px;
   padding: 26px;
+}
+
+.skills h2 {
+  margin-bottom: 18px;
+  color: #38bdf8;
 }
 
 .skill-list span {
@@ -109,39 +167,87 @@ body {
   margin-bottom: 12px;
   padding: 10px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.08);
   text-align: center;
+  font-size: 14px;
+
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 1px rgba(255,255,255,0.3);
 }
 
+/* ================= PROJECTS (BIG CARD) ================= */
 .projects {
   flex: 1;
+  padding: 28px;
   margin-right: 1in;
 }
 
-.project-card {
-  padding: 26px;
-  margin-bottom: 26px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: transform .3s;
+.projects h2 {
+  margin-bottom: 18px;
+  color: #38bdf8;
 }
 
-.project-card:hover {
+/* ================= HORIZONTAL SCROLL ================= */
+.projects-scroll {
+  display: flex;
+  gap: 24px;
+
+  overflow-x: auto;
+  padding: 10px 4px 22px;
+
+  scroll-behavior: smooth;
+}
+
+/* SCROLLBAR STYLE */
+.projects-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 999px;
+}
+
+/* ================= PROJECT CARD ================= */
+.projects-scroll .project-card {
+  min-width: 320px;
+  max-width: 320px;
+  flex-shrink: 0;
+
+  padding: 26px;
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.projects-scroll .project-card:hover {
   transform: translateY(-6px);
+  box-shadow:
+    0 25px 60px rgba(99,102,241,0.45),
+    0 0 30px rgba(139,92,246,0.25);
+}
+
+.project-card h3 {
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  font-size: 14px;
+  opacity: 0.85;
+  line-height: 1.5;
 }
 
 /* ================= BUTTONS ================= */
 .buttons {
   display: flex;
   gap: 12px;
+  margin-top: 16px;
 }
 
 .btn {
   padding: 10px 18px;
-  border-radius: 12px;
-  text-decoration: none;
+  font-size: 13px;
   font-weight: 600;
+  text-decoration: none;
+  border-radius: 12px;
 }
 
 .live {
@@ -154,7 +260,7 @@ body {
   color: white;
 }
 
-/* ================= BOTTOM ================= */
+/* ================= BOTTOM SECTION ================= */
 .bottom-section {
   display: flex;
   gap: 32px;
@@ -163,9 +269,16 @@ body {
   padding: 0 20px;
 }
 
-.summary, .contact {
+.summary,
+.contact {
   flex: 1;
   padding: 32px;
+}
+
+.summary h2,
+.contact h2 {
+  margin-bottom: 14px;
+  color: #38bdf8;
 }
 
 .contact input,
@@ -173,9 +286,11 @@ body {
   width: 100%;
   margin-bottom: 14px;
   padding: 12px;
+
   border-radius: 12px;
-  background: rgba(255,255,255,0.08);
   border: none;
+
+  background: rgba(255,255,255,0.08);
   color: white;
 }
 
@@ -183,16 +298,20 @@ body {
   width: 100%;
   padding: 12px;
   border-radius: 14px;
-  background: linear-gradient(135deg, #22d3ee, #6366f1);
   border: none;
+
+  background: linear-gradient(135deg, #22d3ee, #6366f1);
   font-weight: bold;
+  cursor: pointer;
 }
 
 /* ================= FOOTER ================= */
 footer {
   text-align: center;
-  padding: 24px;
-  opacity: 0.7;
+  padding: 22px;
+  background: rgba(2,6,23,0.7);
+  font-size: 14px;
+  opacity: 0.75;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -202,16 +321,15 @@ footer {
     flex-direction: column;
   }
 
-  .projects {
-    margin-right: 0;
-  }
-
   .skills {
     width: 100%;
   }
 
-  .project-card {
-    flex-direction: column;
-    align-items: flex-start;
+  .projects {
+    margin-right: 0;
+  }
+
+  .projects-scroll {
+    padding-bottom: 14px;
   }
 }
