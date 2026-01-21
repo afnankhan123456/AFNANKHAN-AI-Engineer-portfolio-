@@ -1,42 +1,214 @@
-/* PROJECTS FIXED CARD */
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+  font-family: Inter, Segoe UI, sans-serif;
+  color: #e5e7eb;
+
+  background:
+    radial-gradient(circle at top left, rgba(124,58,237,0.35), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(59,130,246,0.35), transparent 40%),
+    linear-gradient(180deg, #0b1026, #050816);
+}
+
+/* ================= GLASS ================= */
+.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 22px;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.45);
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  margin: 20px;
+}
+
+.nav-center {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.resume-btn {
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  text-decoration: none;
+}
+
+/* ================= HERO ================= */
+.hero {
+  text-align: center;
+  padding: 40px 20px 60px;
+}
+
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.25);
+  margin-bottom: 16px;
+}
+
+/* ================= ABOUT ================= */
+.top-about {
+  padding: 60px 1in;
+}
+
+.about-card {
+  padding: 42px;
+  text-align: center;
+}
+
+.chip-row {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.chip {
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(99,102,241,0.25);
+}
+
+/* ================= MAIN ================= */
+.main-layout {
+  display: flex;
+  gap: 32px;
+  max-width: 1500px;
+  margin: 1in auto;
+  padding: 0 20px;
+}
+
+/* ================= SKILLS ================= */
+.skills {
+  width: 360px;
+  padding: 28px;
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 12px 16px;
+  border-radius: 14px;
+
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(99,102,241,0.35);
+}
+
+.skill-item img {
+  width: 28px;
+  height: 28px;
+}
+
+.skill-item span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ================= PROJECTS ================= */
 .projects {
   flex: 1;
   padding: 28px;
   margin-right: 0.5in;
+}
+
+.skills,
+.projects {
   min-height: 420px;
 }
 
-/* SCROLL ONLY INSIDE */
-.project-scroll-vertical {
-  max-height: 340px;
-  overflow-y: auto;
-  padding-right: 6px;
-}
-
-/* GRID = NO COLLAPSE */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+.project-list {
+  display: flex;
+  flex-direction: column;
   gap: 18px;
+  margin-top: 18px;
 }
 
-/* PROJECT CARD */
 .project-card {
   padding: 20px;
   border-radius: 18px;
   background: rgba(255,255,255,0.08);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(99,102,241,0.35);
 }
 
-/* SCROLLBAR CLEAN */
-.project-scroll-vertical::-webkit-scrollbar {
-  width: 8px;
+/* ================= BUTTONS ================= */
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
 }
-.project-scroll-vertical::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.25);
-  border-radius: 999px;
+
+.btn {
+  padding: 9px 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.live {
+  background: linear-gradient(135deg, #22d3ee, #38bdf8);
+  color: #020617;
+}
+
+.code {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 22px;
+  opacity: 0.7;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .skills {
+    width: 100%;
+  }
+
+  .projects {
+    margin-right: 0;
+  }
 }
