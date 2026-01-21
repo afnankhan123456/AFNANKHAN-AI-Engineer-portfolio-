@@ -9,37 +9,115 @@
 
 <nav class="navbar glass">
   <div class="nav-left">AFNANKHAN</div>
+
   <ul class="nav-center">
     <li>Home</li>
     <li>About</li>
     <li>Skills</li>
     <li>Projects</li>
   </ul>
+
   <a href="#" class="resume-btn">Resume</a>
 </nav>
 
 <section class="hero">
-  <img src="https://raw.githubusercontent.com/afnankhan123456/AFNANKHAN-AI-Engineer-portfolio-/main/image/image.webp"
-       class="profile-img" />
+  <img
+    src="https://raw.githubusercontent.com/afnankhan123456/AFNANKHAN-AI-Engineer-portfolio-/main/image/image.webp"
+    class="profile-img"
+    alt="AFNANKHAN"
+  />
   <h1>AFNANKHAN</h1>
   <p>AI Engineer | Computer Vision | Data Science</p>
 </section>
 
-<!-- EXISTING ABOUT + MAIN LAYOUT SAME AS BEFORE -->
-<!-- (no change here) -->
+<section class="top-about">
+  <div class="about-wrapper">
 
-<!-- ================= LAST SECTION (NEW) ================= -->
+    <div class="about-photo-container">
+      <div class="about-photo-frame glass">
+        <img
+          src="https://raw.githubusercontent.com/afnankhan123456/AFNANKHAN-AI-Engineer-portfolio-/main/image/1%20-%20Copy.jpg"
+          alt="AFNANKHAN Photo"
+        />
+      </div>
+    </div>
+
+    <div class="about-card glass">
+      <h2>About Me</h2>
+      <p>
+        AI Engineer specialized in Data Science, Machine Learning,
+        Deep Learning, and Computer Vision with real-world project experience.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="main-layout">
+
+  <div class="skills glass">
+    <h2>Skills</h2>
+
+    <div class="skill-list scroll-skills">
+
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><span>Python</span></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"><span>Machine Learning</span></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"><span>Deep Learning</span></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"><span>Flask</span></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg"><span>OpenCV</span></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"><span>NumPy</span></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"><span>Pandas</span></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"><span>MySQL</span></div>
+
+    </div>
+  </div>
+
+  <div class="projects glass">
+    <h2>Projects</h2>
+
+    <div class="project-list scroll-area">
+
+      <div class="project-card">
+        <h3>Emotion Detection</h3>
+        <p>Real-time facial emotion detection using CNN & OpenCV.</p>
+        <div class="buttons">
+          <a class="btn live">Live</a>
+          <a class="btn code">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>AI Chatbot</h3>
+        <p>NLP chatbot with Flask backend.</p>
+        <div class="buttons">
+          <a class="btn live">Live</a>
+          <a class="btn code">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Face Recognition</h3>
+        <p>Deep learning based face recognition system.</p>
+        <div class="buttons">
+          <a class="btn live">Live</a>
+          <a class="btn code">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- LAST 2 CARDS -->
 <section class="bottom-cards">
 
-  <!-- LEFT ABOUT CARD -->
   <div class="bottom-card glass">
     <h2>About Me</h2>
     <p>
-      I am an AI Engineer specializing in real-world AI applications
-      including Emotion Detection, Computer Vision, Machine Learning
-      and Deep Learning using OpenCV & modern frameworks.
+      I am an AI Engineer specializing in developing real-world AI applications
+      in Emotion Detection, Computer Vision, Machine Learning, and Deep Learning.
     </p>
-
     <div class="social-icons">
       <span>🐦</span>
       <span>💻</span>
@@ -47,29 +125,21 @@
       <span>▶️</span>
       <span>✉️</span>
     </div>
-
-    <div class="copyright">
-      © 2026 AFNANKHAN | AI Portfolio
-    </div>
   </div>
 
-  <!-- RIGHT CONTACT CARD -->
   <div class="bottom-card glass">
     <h2>Contact</h2>
-    <h4>Let's Connect!</h4>
-    <p class="contact-sub">
-      Feel free to reach out to me for collaborations or inquiries.
-    </p>
-
-    <form class="contact-form">
-      <input type="text" placeholder="Full Name" />
-      <input type="email" placeholder="Email Address" />
-      <textarea placeholder="Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email Address">
+    <textarea placeholder="Message"></textarea>
+    <button class="send-btn">Send Message</button>
   </div>
 
 </section>
+
+<footer>
+  © 2026 AFNANKHAN | AI Portfolio
+</footer>
 
 </body>
 </html>
