@@ -94,26 +94,20 @@ body {
   padding: 0 20px;
 }
 
-/* ================= SKILLS (WIDER) ================= */
+/* ================= SKILLS ================= */
 .skills {
-  width: 360px; /* wider */
+  width: 360px;
   padding: 28px;
-}
-
-.skill-list span {
-  display: block;
-  margin-bottom: 12px;
-  padding: 10px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.08);
-  text-align: center;
 }
 
 /* ================= PROJECTS ================= */
 .projects {
   flex: 1;
+
+  /* 🔥 CHANGE #1: right gap HALF INCH */
+  margin-right: 0.5in;
+
   padding: 28px;
-  margin-right: 1in; /* right gap */
 }
 
 /* SAME HEIGHT FEEL */
@@ -122,7 +116,7 @@ body {
   min-height: 420px;
 }
 
-/* PROJECT LIST (VERTICAL) */
+/* ================= PROJECT LIST ================= */
 .project-list {
   display: flex;
   flex-direction: column;
@@ -130,7 +124,7 @@ body {
   margin-top: 18px;
 }
 
-/* PROJECT CARD */
+/* ================= PROJECT CARD ================= */
 .project-card {
   padding: 20px;
   border-radius: 18px;
