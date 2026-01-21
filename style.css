@@ -45,10 +45,10 @@ body {
   text-decoration: none;
 }
 
-/* HERO */
+/* HERO — ✅ GAP FIX HERE */
 .hero {
   text-align: center;
-  padding: 40px 20px 60px;
+  padding: 40px 20px 20px;   /* was 60px bottom */
 }
 
 .profile-img {
@@ -58,9 +58,9 @@ body {
   border: 3px solid rgba(255,255,255,0.25);
 }
 
-/* ABOUT */
+/* ABOUT — ✅ GAP FIX HERE */
 .top-about {
-  padding: 20px 0;
+  padding: 6px 0;            /* was 20px */
 }
 
 .about-wrapper {
@@ -69,7 +69,7 @@ body {
   padding: 0 20px;
 }
 
-/* PHOTO FRAME (NO EXTRA GAP) */
+/* PHOTO FRAME */
 .about-photo-container {
   margin-bottom: 0;
 }
@@ -100,12 +100,6 @@ body {
 .about-card {
   padding: 42px;
   text-align: center;
-}
-
-/* ✅ ONLY GAP FIX — DEFAULT H2 MARGIN OVERRIDE */
-.about-card h2 {
-  margin-top: 6px;   /* ⬅️ gap yahin se kam hota hai */
-  margin-bottom: 14px;
 }
 
 /* MAIN LAYOUT */
