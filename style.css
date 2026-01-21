@@ -36,19 +36,19 @@ body {
 .about-wrapper {
   max-width: 1500px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 220px 20px 0;   /* 🔥 SPACE FOR PHOTO (KEY FIX) */
 }
 
 .about-card {
   padding: 42px;
   text-align: center;
-  position: relative;   /* 🔴 MUST */
+  position: relative;
 }
 
-/* ✅ EXACT REQUIREMENT HERE */
+/* PHOTO — EXACT 2 INCHES ABOVE CARD */
 .about-photo-container {
   position: absolute;
-  top: -200px;          /* 👈 PURE 2 INCHES UP FROM CARD */
+  top: -200px;             /* 👈 2 inches up */
   left: 50%;
   transform: translateX(-50%);
 }
