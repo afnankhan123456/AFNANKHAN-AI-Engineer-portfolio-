@@ -69,11 +69,15 @@ body {
   padding: 0 20px;
 }
 
-/* PHOTO FRAME — GAP FIX */
+/* 🔥 REAL GAP FIX (HALF INCH LOOK) */
 .about-photo-container {
-  margin-bottom: 14px;   /* ✅ GAP REDUCED (sirf yahi change) */
+  margin-top: -22px;     /* ⬅️ pulls photo closer to top card */
+  margin-bottom: 12px;   /* ⬅️ half-inch spacing */
+  display: flex;
+  justify-content: center;
 }
 
+/* PHOTO FRAME */
 .about-photo-frame {
   width: 140px;
   height: 140px;
