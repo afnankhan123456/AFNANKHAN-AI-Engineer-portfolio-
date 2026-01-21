@@ -59,7 +59,13 @@ body {
 
 /* ABOUT */
 .top-about {
-  padding: 60px 1in;
+  padding: 60px 0;
+}
+
+.about-wrapper {
+  max-width: 1500px;   /* SAME AS MAIN-LAYOUT */
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .about-card {
