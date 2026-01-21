@@ -59,7 +59,7 @@ body {
 
 /* ABOUT */
 .top-about {
-  padding: 15px 0;
+  padding: 5px 0;
 }
 
 .about-wrapper {
@@ -204,5 +204,6 @@ footer {
     max-height: none;
   }
 }
+
 
 
