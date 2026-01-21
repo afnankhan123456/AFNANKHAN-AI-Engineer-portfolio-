@@ -1,18 +1,201 @@
-/* ABOUT CARD */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Segoe UI, sans-serif;
+  color: #e5e7eb;
+  background:
+    radial-gradient(circle at top left, rgba(124,58,237,0.35), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(59,130,246,0.35), transparent 40%),
+    linear-gradient(180deg, #0b1026, #050816);
+}
+
+.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 22px;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.45);
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  margin: 20px;
+}
+
+.nav-center {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.resume-btn {
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 40px 20px 60px;
+}
+
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.25);
+}
+
+/* ABOUT */
+.top-about {
+  padding: 10px 0; /* about ke andar halka space */
+}
+
+.about-wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .about-card {
   padding: 42px;
   text-align: center;
-  position: relative;
 }
 
-/* 🔥 PHOTO — SAFE, CHIPKA HUA NAHI */
-.about-img {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid rgba(255,255,255,0.25);
+/* MAIN LAYOUT (?? REAL FIX HERE ??) */
+.main-layout {
+  display: flex;
+  gap: 32px;
+  max-width: 1500px;
+  margin: 14px auto;   /* ?? HALF-INCH JAISE GAP */
+  padding: 0 20px;
+}
+
+/* SKILLS */
+.skills {
+  width: 320px;
+  padding: 22px;
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.scroll-skills {
+  max-height: 360px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.scroll-skills::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scroll-skills::-webkit-scrollbar-thumb {
+  background: rgba(99,102,241,0.6);
+  border-radius: 10px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.skill-item img {
+  width: 22px;
+  height: 22px;
+}
+
+.skill-item span {
+  font-size: 13px;
+}
+
+/* PROJECTS */
+.projects {
+  flex: 1;
+  padding: 28px;
+  height: 520px;
+}
+
+.scroll-area {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.project-card {
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.08);
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.btn {
+  padding: 9px 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.live {
+  background: linear-gradient(135deg, #22d3ee, #38bdf8);
+  color: #020617;
+}
+
+.code {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 22px;
+  opacity: 0.7;
+}
+
+@media (max-width: 900px) {
+  .main-layout {
+    flex-direction: column;
+    margin: 16px auto;
+  }
+
+  .skills {
+    width: 100%;
+  }
+
+  .projects {
+    height: auto;
+  }
+
+  .scroll-area,
+  .scroll-skills {
+    max-height: none;
+  }
 }
