@@ -13,91 +13,51 @@ body {
     linear-gradient(180deg, #0b1026, #050816);
 }
 
-/* GLASS */
 .glass {
   background: rgba(255,255,255,0.06);
   backdrop-filter: blur(18px);
-  border: 1px solid rgba(255,255,255,0.12);
   border-radius: 22px;
-  box-shadow: 0 15px 45px rgba(0,0,0,0.45);
-}
-
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 40px;
-  margin: 20px;
-}
-
-.nav-center {
-  list-style: none;
-  display: flex;
-  gap: 28px;
-}
-
-.resume-btn {
-  padding: 10px 22px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  color: white;
-  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.12);
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 20px 20px 10px;
-}
-
-.hero img,
-.hero h1,
-.hero p {
-  margin: 0;
-}
-
-.hero h1 {
-  margin-top: 10px;
-}
-
-.hero p {
-  margin-top: 6px;
+  padding: 20px;
 }
 
 .profile-img {
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  border: 3px solid rgba(255,255,255,0.25);
 }
 
 /* ABOUT */
-.top-about {
-  padding: 0;
-}
-
 .about-wrapper {
   max-width: 1500px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* 🔥 ONLY CHANGE — PHOTO FRAME 2 INCHES UP */
+.about-card {
+  padding: 42px;
+  text-align: center;
+  position: relative;   /* 🔴 MUST */
+}
+
+/* ✅ EXACT REQUIREMENT HERE */
 .about-photo-container {
-  margin-top: -200px;     /* ~2 inches */
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  top: -200px;          /* 👈 PURE 2 INCHES UP FROM CARD */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .about-photo-frame {
   width: 140px;
   height: 140px;
-  border-radius: 50% !important;
+  border-radius: 50%;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .about-photo-frame img {
@@ -106,43 +66,23 @@ body {
   object-fit: cover;
 }
 
-.about-card {
-  padding: 42px;
-  text-align: center;
-  margin-top: 10px;
-}
-
-/* MAIN LAYOUT */
+/* LAYOUT */
 .main-layout {
   display: flex;
   gap: 32px;
-  max-width: 1500px;
-  margin: 14px auto;
-  padding: 0 20px;
+  padding: 20px;
 }
 
-/* SKILLS */
 .skills {
   width: 320px;
-  padding: 22px;
 }
 
-/* PROJECTS */
 .projects {
   flex: 1;
-  padding: 28px;
-  height: 520px;
 }
 
 footer {
   text-align: center;
   padding: 22px;
   opacity: 0.7;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .main-layout {
-    flex-direction: column;
-  }
 }
