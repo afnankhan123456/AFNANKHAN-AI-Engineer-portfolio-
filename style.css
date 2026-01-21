@@ -68,16 +68,19 @@ body {
   padding: 0 20px;
 }
 
-/* PHOTO FRAME */
+/* PERFECT CIRCLE PHOTO */
 .about-photo-container {
   margin-bottom: 28px;
 }
 
 .about-photo-frame {
-  width: 130px;
-  height: 170px;
-  border-radius: 50%;
+  width: 140px;
+  height: 140px;        /* ✅ SAME WIDTH & HEIGHT */
+  border-radius: 50%;  /* ✅ PERFECT CIRCLE */
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-photo-frame img {
@@ -86,6 +89,7 @@ body {
   object-fit: cover;
 }
 
+/* ABOUT CARD */
 .about-card {
   padding: 42px;
   text-align: center;
