@@ -110,13 +110,10 @@ body {
   display: flex;
   align-items: center;
   gap: 14px;
-
   padding: 12px 16px;
   border-radius: 14px;
-
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.12);
-
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -128,11 +125,6 @@ body {
 .skill-item img {
   width: 28px;
   height: 28px;
-}
-
-.skill-item span {
-  font-size: 14px;
-  font-weight: 500;
 }
 
 /* ================= PROJECTS ================= */
@@ -147,13 +139,30 @@ body {
   min-height: 420px;
 }
 
-.project-list {
+/* 🔥 HORIZONTAL SCROLL INSIDE PROJECT CARD */
+.project-scroll {
   display: flex;
-  flex-direction: column;
-  gap: 18px;
-  margin-top: 18px;
+  gap: 22px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scroll-behavior: smooth;
 }
 
+.project-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.project-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.25);
+  border-radius: 999px;
+}
+
+.project-scroll .project-card {
+  min-width: 300px;
+  max-width: 300px;
+  flex-shrink: 0;
+}
+
+/* PROJECT CARD */
 .project-card {
   padding: 20px;
   border-radius: 18px;
