@@ -78,7 +78,7 @@ body {
   display: flex;
   gap: 32px;
   max-width: 1500px;
-  margin: 24px auto;   /* 👈 HALF-INCH JAISE GAP */
+  margin: 14px auto;   /* 👈 HALF-INCH JAISE GAP */
   padding: 0 20px;
 }
 
@@ -199,3 +199,4 @@ footer {
     max-height: none;
   }
 }
+
