@@ -45,20 +45,18 @@ body {
   text-decoration: none;
 }
 
-/* HERO — 🔥 REAL GAP KILL */
+/* HERO */
 .hero {
   text-align: center;
-  padding: 20px 20px 10px;   /* minimal padding */
+  padding: 20px 20px 10px;
 }
 
-/* 🔥 THIS IS THE FIX */
 .hero img,
 .hero h1,
 .hero p {
-  margin: 0;                /* ⬅️ DEFAULT GAP GONE */
+  margin: 0;
 }
 
-/* small controlled spacing only */
 .hero h1 {
   margin-top: 10px;
 }
@@ -76,7 +74,7 @@ body {
 
 /* ABOUT */
 .top-about {
-  padding: 0;               /* no extra gap */
+  padding: 0;
 }
 
 .about-wrapper {
@@ -85,9 +83,11 @@ body {
   padding: 0 20px;
 }
 
-/* PHOTO FRAME */
+/* 🔥 ONLY CHANGE — PHOTO FRAME 2 INCHES UP */
 .about-photo-container {
-  margin: 0;
+  margin-top: -200px;     /* ~2 inches */
+  display: flex;
+  justify-content: center;
 }
 
 .about-photo-frame {
@@ -106,11 +106,10 @@ body {
   object-fit: cover;
 }
 
-/* ABOUT CARD */
 .about-card {
   padding: 42px;
   text-align: center;
-  margin-top: 10px;         /* ⬅️ HALF-INCH CONTROL */
+  margin-top: 10px;
 }
 
 /* MAIN LAYOUT */
