@@ -296,44 +296,10 @@ body {
   overflow-y: auto;
 }
 
-/* ===================================================== */
-/* 🔥 ADD-ONLY UPDATE (NO REMOVAL) 🔥 */
-/* ===================================================== */
-
-/* Photo ke side me text dikhana (≈1 inch gap) */
-.about-photo-container {
-  display: flex;
-  align-items: center;
-}
-
-/* Text add without touching HTML */
-.about-photo-container::after {
-  content: "AFNANKHAN\nData Scientist";
-  white-space: pre-line;
-  margin-left: 96px;          /* ≈ 1 inch gap */
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.3;
-  color: #e5e7eb;
-}
-
-/* Upar jo chhota oval/gola/badge text aata hai — hide (safe) */
-.hero span,
-.hero .badge,
-.hero .tag,
-.hero .label {
-  display: none !important;
-}
-
-/* Mobile pe stack */
-@media (max-width: 900px) {
-  .about-photo-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-photo-container::after {
-    margin-left: 0;
-    margin-top: 14px;
-  }
+/* ===== RED AREA TEXT REMOVED (HERO TEXT HIDDEN) ===== */
+.hero h1,
+.hero h2,
+.hero p,
+.hero span {
+  display: none;
 }
