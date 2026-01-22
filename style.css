@@ -69,37 +69,37 @@ body {
   padding: 0 20px;
 }
 
-/* PHOTO FRAME */
+/* PHOTO FRAME (FIXED GAP) */
 .about-photo-container {
-  margin-bottom: 28px;
+  margin-bottom: 12px; /* ✔ half inch gap */
+  display: flex;
+  justify-content: center;
 }
 
 .about-photo-frame {
   width: 140px;
   height: 140px;
-  border-radius: 50% !important;
+  border-radius: 50%;
   overflow: hidden;
-  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.about-photo-frame.glass {
-  border-radius: 50% !important;
 }
 
 .about-photo-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
-/* ABOUT CARD */
+/* ABOUT CARD (FIXED EXTRA TOP GAP) */
 .about-card {
   padding: 42px;
   text-align: center;
+}
+
+.about-card h2 {
+  margin-top: 0; /* ✔ unnecessary gap removed */
 }
 
 /* MAIN LAYOUT */
@@ -209,27 +209,6 @@ footer {
   opacity: 0.7;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .main-layout {
-    flex-direction: column;
-    margin: 16px auto;
-  }
-
-  .skills {
-    width: 100%;
-  }
-
-  .projects {
-    height: auto;
-  }
-
-  .scroll-area,
-  .scroll-skills {
-    max-height: none;
-  }
-}
-
 /* EXTRA TWO CARDS */
 .extra-two-cards {
   max-width: 1500px;
@@ -283,13 +262,32 @@ footer {
   color: #020617;
 }
 
+/* RESPONSIVE */
 @media (max-width: 900px) {
+  .main-layout {
+    flex-direction: column;
+    margin: 16px auto;
+  }
+
+  .skills {
+    width: 100%;
+  }
+
+  .projects {
+    height: auto;
+  }
+
+  .scroll-area,
+  .scroll-skills {
+    max-height: none;
+  }
+
   .extra-two-cards {
     grid-template-columns: 1fr;
   }
 }
 
-/* ===== FINAL SCROLL FIX (IMPORTANT) ===== */
+/* FINAL SCROLL FIX */
 html,
 body {
   height: auto;
