@@ -45,10 +45,10 @@ body {
   text-decoration: none;
 }
 
-/* HERO */
+/* HERO  ⬅️ GAP FIX HERE */
 .hero {
   text-align: center;
-  padding: 40px 20px 60px;
+  padding: 40px 20px 20px; /* pehle 60px tha */
 }
 
 .profile-img {
@@ -58,9 +58,9 @@ body {
   border: 3px solid rgba(255,255,255,0.25);
 }
 
-/* ABOUT */
+/* ABOUT ⬅️ GAP FIX HERE */
 .top-about {
-  padding: 20px 0;
+  padding: 8px 0; /* pehle 20px tha */
 }
 
 .about-wrapper {
@@ -289,7 +289,7 @@ footer {
   }
 }
 
-/* ===== FINAL SCROLL FIX (IMPORTANT) ===== */
+/* FINAL SCROLL FIX */
 html,
 body {
   height: auto;
