@@ -55,7 +55,22 @@ body {
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  border: none;   /* ✅ sirf circle removed */
+  border: none;
+}
+
+/* 🔥 HERO TEXT (ADDED – NOTHING REMOVED) */
+.hero-name {
+  margin-top: 18px;
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.hero-title {
+  margin-top: 6px;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0.9;
 }
 
 /* ABOUT */
