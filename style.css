@@ -22,13 +22,13 @@ body {
   box-shadow: 0 15px 45px rgba(0,0,0,0.45);
 }
 
-/* NAVBAR ⬅️ GAP FIX */
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px 40px;
-  margin: 20px 20px 6px; /* ⬅️ bottom margin kam */
+  margin: 20px;
 }
 
 .nav-center {
@@ -45,10 +45,11 @@ body {
   text-decoration: none;
 }
 
-/* HERO ⬅️ GAP FIX */
+/* HERO (ORIGINAL – UNTOUCHED) */
 .hero {
   text-align: center;
-  padding: 36px 20px 14px; /* ⬅️ bottom padding kam */
+  padding: 40px 20px 60px;
+  position: relative;
 }
 
 .profile-img {
@@ -58,20 +59,24 @@ body {
   border: 3px solid rgba(255,255,255,0.25);
 }
 
-/* ABOUT ⬅️ GAP FIX */
+/* ABOUT */
 .top-about {
-  padding: 4px 0; /* ⬅️ hero → photo gap yahin se control hota */
+  padding: 20px 0;
+  position: relative;
 }
 
 .about-wrapper {
   max-width: 1500px;
   margin: 0 auto;
   padding: 0 20px;
+  position: relative;
 }
 
-/* PHOTO FRAME (UNCHANGED) */
+/* PHOTO FRAME */
 .about-photo-container {
   margin-bottom: 28px;
+  position: relative;
+  z-index: 2;
 }
 
 .about-photo-frame {
@@ -85,15 +90,10 @@ body {
   justify-content: center;
 }
 
-.about-photo-frame.glass {
-  border-radius: 50% !important;
-}
-
 .about-photo-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
 /* ABOUT CARD */
@@ -117,90 +117,11 @@ body {
   padding: 22px;
 }
 
-.skill-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.scroll-skills {
-  max-height: 360px;
-  overflow-y: auto;
-  padding-right: 6px;
-}
-
-.scroll-skills::-webkit-scrollbar {
-  width: 5px;
-}
-
-.scroll-skills::-webkit-scrollbar-thumb {
-  background: rgba(99,102,241,0.6);
-  border-radius: 10px;
-}
-
-.skill-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 14px;
-  border-radius: 14px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
-}
-
-.skill-item img {
-  width: 22px;
-  height: 22px;
-}
-
-.skill-item span {
-  font-size: 13px;
-}
-
 /* PROJECTS */
 .projects {
   flex: 1;
   padding: 28px;
   height: 520px;
-}
-
-.scroll-area {
-  margin-top: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  max-height: 420px;
-  overflow-y: auto;
-}
-
-.project-card {
-  padding: 20px;
-  border-radius: 18px;
-  background: rgba(255,255,255,0.08);
-}
-
-.buttons {
-  display: flex;
-  gap: 12px;
-  margin-top: 14px;
-}
-
-.btn {
-  padding: 9px 16px;
-  border-radius: 12px;
-  font-size: 13px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.live {
-  background: linear-gradient(135deg, #22d3ee, #38bdf8);
-  color: #020617;
-}
-
-.code {
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  color: white;
 }
 
 footer {
@@ -223,27 +144,33 @@ footer {
   padding: 36px;
 }
 
-.extra-card h2 {
-  margin-bottom: 12px;
+/* ===== FINAL SCROLL FIX ===== */
+html,
+body {
+  height: auto;
+  overflow-y: auto;
 }
 
-.extra-card p {
-  font-size: 14px;
-  line-height: 1.6;
-  opacity: 0.9;
+/* ===================================================== */
+/* 🔥 FINAL ALIGNMENT HACK (NO REMOVAL, CSS ONLY) 🔥 */
+/* ===================================================== */
+
+/* hero text ko niche + right side lao */
+.hero h1,
+.hero p {
+  position: absolute;
+  left: calc(50% + 96px);   /* photo ke baad ~1 inch gap */
+  top: calc(100% + 20px);  /* header ke niche */
+  text-align: left;
+  transform: translateX(-50%);
 }
 
-.extra-card input,
-.extra-card textarea {
-  width: 100%;
-  margin-top: 12px;
-  padding: 12px 14px;
-  border-radius: 12px;
-  border: none;
-  outline: none;
-  background: rgba(255,255,255,0.08);
-  color: #e5e7eb;
+/* mobile safe */
+@media (max-width: 900px) {
+  .hero h1,
+  .hero p {
+    position: static;
+    transform: none;
+    text-align: center;
+  }
 }
-
-.extra-card textarea {
-  height:
