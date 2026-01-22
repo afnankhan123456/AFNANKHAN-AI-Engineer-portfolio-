@@ -45,11 +45,10 @@ body {
   text-decoration: none;
 }
 
-/* HERO (ORIGINAL – UNTOUCHED) */
+/* HERO */
 .hero {
   text-align: center;
   padding: 40px 20px 60px;
-  position: relative;
 }
 
 .profile-img {
@@ -62,21 +61,17 @@ body {
 /* ABOUT */
 .top-about {
   padding: 20px 0;
-  position: relative;
 }
 
 .about-wrapper {
   max-width: 1500px;
   margin: 0 auto;
   padding: 0 20px;
-  position: relative;
 }
 
 /* PHOTO FRAME */
 .about-photo-container {
   margin-bottom: 28px;
-  position: relative;
-  z-index: 2;
 }
 
 .about-photo-frame {
@@ -90,10 +85,15 @@ body {
   justify-content: center;
 }
 
+.about-photo-frame.glass {
+  border-radius: 50% !important;
+}
+
 .about-photo-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 /* ABOUT CARD */
@@ -117,6 +117,46 @@ body {
   padding: 22px;
 }
 
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.scroll-skills {
+  max-height: 360px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.scroll-skills::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scroll-skills::-webkit-scrollbar-thumb {
+  background: rgba(99,102,241,0.6);
+  border-radius: 10px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.skill-item img {
+  width: 22px;
+  height: 22px;
+}
+
+.skill-item span {
+  font-size: 13px;
+}
+
 /* PROJECTS */
 .projects {
   flex: 1;
@@ -124,10 +164,70 @@ body {
   height: 520px;
 }
 
+.scroll-area {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.project-card {
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.08);
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.btn {
+  padding: 9px 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.live {
+  background: linear-gradient(135deg, #22d3ee, #38bdf8);
+  color: #020617;
+}
+
+.code {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+}
+
 footer {
   text-align: center;
   padding: 22px;
   opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .main-layout {
+    flex-direction: column;
+    margin: 16px auto;
+  }
+
+  .skills {
+    width: 100%;
+  }
+
+  .projects {
+    height: auto;
+  }
+
+  .scroll-area,
+  .scroll-skills {
+    max-height: none;
+  }
 }
 
 /* EXTRA TWO CARDS */
@@ -144,7 +244,52 @@ footer {
   padding: 36px;
 }
 
-/* ===== FINAL SCROLL FIX ===== */
+.extra-card h2 {
+  margin-bottom: 12px;
+}
+
+.extra-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.extra-card input,
+.extra-card textarea {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.08);
+  color: #e5e7eb;
+}
+
+.extra-card textarea {
+  height: 100px;
+  resize: none;
+}
+
+.extra-send-btn {
+  margin-top: 16px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: linear-gradient(135deg, #38bdf8, #22d3ee);
+  color: #020617;
+}
+
+@media (max-width: 900px) {
+  .extra-two-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== FINAL SCROLL FIX (IMPORTANT) ===== */
 html,
 body {
   height: auto;
@@ -152,25 +297,43 @@ body {
 }
 
 /* ===================================================== */
-/* 🔥 FINAL ALIGNMENT HACK (NO REMOVAL, CSS ONLY) 🔥 */
+/* 🔥 ADD-ONLY UPDATE (NO REMOVAL) 🔥 */
 /* ===================================================== */
 
-/* hero text ko niche + right side lao */
-.hero h1,
-.hero p {
-  position: absolute;
-  left: calc(50% + 96px);   /* photo ke baad ~1 inch gap */
-  top: calc(100% + 20px);  /* header ke niche */
-  text-align: left;
-  transform: translateX(-50%);
+/* Photo ke side me text dikhana (≈1 inch gap) */
+.about-photo-container {
+  display: flex;
+  align-items: center;
 }
 
-/* mobile safe */
+/* Text add without touching HTML */
+.about-photo-container::after {
+  content: "AFNANKHAN\nData Scientist";
+  white-space: pre-line;
+  margin-left: 96px;          /* ≈ 1 inch gap */
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #e5e7eb;
+}
+
+/* Upar jo chhota oval/gola/badge text aata hai — hide (safe) */
+.hero span,
+.hero .badge,
+.hero .tag,
+.hero .label {
+  display: none !important;
+}
+
+/* Mobile pe stack */
 @media (max-width: 900px) {
-  .hero h1,
-  .hero p {
-    position: static;
-    transform: none;
+  .about-photo-container {
+    flex-direction: column;
     text-align: center;
+  }
+
+  .about-photo-container::after {
+    margin-left: 0;
+    margin-top: 14px;
   }
 }
