@@ -55,22 +55,7 @@ body {
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  border: none;
-}
-
-/* 🔥 HERO TEXT (ADDED – NOTHING REMOVED) */
-.hero-name {
-  margin-top: 18px;
-  font-size: 42px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.hero-title {
-  margin-top: 6px;
-  font-size: 20px;
-  font-weight: 600;
-  opacity: 0.9;
+  border: 3px solid rgba(255,255,255,0.25);
 }
 
 /* ABOUT */
@@ -304,7 +289,7 @@ footer {
   }
 }
 
-/* FINAL SCROLL FIX */
+/* ===== FINAL SCROLL FIX (IMPORTANT) ===== */
 html,
 body {
   height: auto;
