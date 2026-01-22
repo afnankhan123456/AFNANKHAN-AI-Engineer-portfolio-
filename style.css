@@ -47,6 +47,7 @@ body {
 
 /* HERO */
 .hero {
+  position: relative;
   text-align: center;
   padding: 40px 20px 60px;
 }
@@ -55,7 +56,32 @@ body {
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  border: none; /* ✅ frame removed, photo safe */
+  border: none;           /* frame removed */
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== HIDE WATERMARK INSIDE HERO IMAGE ===== */
+.hero::after {
+  content: "";
+  position: absolute;
+
+  /* watermark position */
+  top: 32%;
+  left: 50%;
+  transform: translateX(20%);
+
+  width: 180px;
+  height: 55px;
+
+  /* SAME BACKGROUND */
+  background:
+    radial-gradient(circle at top left, rgba(124,58,237,0.35), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(59,130,246,0.35), transparent 40%),
+    linear-gradient(180deg, #0b1026, #050816);
+
+  border-radius: 40px;
+  z-index: 2;
 }
 
 /* ABOUT */
@@ -69,7 +95,7 @@ body {
   padding: 0 20px;
 }
 
-/* PHOTO FRAME */
+/* PHOTO */
 .about-photo-container {
   margin-bottom: 28px;
 }
@@ -77,16 +103,12 @@ body {
 .about-photo-frame {
   width: 140px;
   height: 140px;
-  border-radius: 50% !important;
+  border-radius: 50%;
   overflow: hidden;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.about-photo-frame.glass {
-  border-radius: 50% !important;
 }
 
 .about-photo-frame img {
@@ -289,14 +311,14 @@ footer {
   }
 }
 
-/* ===== FINAL SCROLL FIX (IMPORTANT) ===== */
+/* FINAL SCROLL FIX */
 html,
 body {
   height: auto;
   overflow-y: auto;
 }
 
-/* ===== RED AREA TEXT REMOVED (HERO TEXT HIDDEN) ===== */
+/* HERO TEXT HIDDEN */
 .hero h1,
 .hero h2,
 .hero p,
