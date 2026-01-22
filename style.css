@@ -96,10 +96,19 @@ body {
   display: block;
 }
 
-/* ABOUT CARD */
+/* ABOUT CARD (FIXED ONLY HERE) */
 .about-card {
   padding: 42px;
   text-align: center;
+  max-width: 520px;       /* right side se chhota */
+}
+
+/* about text sirf 3 lines */
+.about-card p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* MAIN LAYOUT */
@@ -148,11 +157,6 @@ body {
   border: 1px solid rgba(255,255,255,0.12);
 }
 
-.skill-item img {
-  width: 22px;
-  height: 22px;
-}
-
 .skill-item span {
   font-size: 13px;
 }
@@ -179,30 +183,7 @@ body {
   background: rgba(255,255,255,0.08);
 }
 
-.buttons {
-  display: flex;
-  gap: 12px;
-  margin-top: 14px;
-}
-
-.btn {
-  padding: 9px 16px;
-  border-radius: 12px;
-  font-size: 13px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.live {
-  background: linear-gradient(135deg, #22d3ee, #38bdf8);
-  color: #020617;
-}
-
-.code {
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  color: white;
-}
-
+/* FOOTER */
 footer {
   text-align: center;
   padding: 22px;
@@ -244,10 +225,6 @@ footer {
   padding: 36px;
 }
 
-.extra-card h2 {
-  margin-bottom: 12px;
-}
-
 .extra-card p {
   font-size: 14px;
   line-height: 1.6;
@@ -266,11 +243,6 @@ footer {
   color: #e5e7eb;
 }
 
-.extra-card textarea {
-  height: 100px;
-  resize: none;
-}
-
 .extra-send-btn {
   margin-top: 16px;
   width: 100%;
@@ -283,13 +255,7 @@ footer {
   color: #020617;
 }
 
-@media (max-width: 900px) {
-  .extra-two-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ===== FINAL SCROLL FIX (IMPORTANT) ===== */
+/* FINAL SCROLL FIX */
 html,
 body {
   height: auto;
