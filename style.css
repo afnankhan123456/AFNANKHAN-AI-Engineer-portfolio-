@@ -22,13 +22,13 @@ body {
   box-shadow: 0 15px 45px rgba(0,0,0,0.45);
 }
 
-/* NAVBAR */
+/* NAVBAR ⬅️ GAP FIX */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px 40px;
-  margin: 20px;
+  margin: 20px 20px 6px; /* ⬅️ bottom margin kam */
 }
 
 .nav-center {
@@ -45,10 +45,10 @@ body {
   text-decoration: none;
 }
 
-/* HERO  ⬅️ GAP FIX HERE */
+/* HERO ⬅️ GAP FIX */
 .hero {
   text-align: center;
-  padding: 40px 20px 20px; /* pehle 60px tha */
+  padding: 36px 20px 14px; /* ⬅️ bottom padding kam */
 }
 
 .profile-img {
@@ -58,9 +58,9 @@ body {
   border: 3px solid rgba(255,255,255,0.25);
 }
 
-/* ABOUT ⬅️ GAP FIX HERE */
+/* ABOUT ⬅️ GAP FIX */
 .top-about {
-  padding: 8px 0; /* pehle 20px tha */
+  padding: 4px 0; /* ⬅️ hero → photo gap yahin se control hota */
 }
 
 .about-wrapper {
@@ -69,7 +69,7 @@ body {
   padding: 0 20px;
 }
 
-/* PHOTO FRAME */
+/* PHOTO FRAME (UNCHANGED) */
 .about-photo-container {
   margin-bottom: 28px;
 }
@@ -209,27 +209,6 @@ footer {
   opacity: 0.7;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .main-layout {
-    flex-direction: column;
-    margin: 16px auto;
-  }
-
-  .skills {
-    width: 100%;
-  }
-
-  .projects {
-    height: auto;
-  }
-
-  .scroll-area,
-  .scroll-skills {
-    max-height: none;
-  }
-}
-
 /* EXTRA TWO CARDS */
 .extra-two-cards {
   max-width: 1500px;
@@ -267,31 +246,4 @@ footer {
 }
 
 .extra-card textarea {
-  height: 100px;
-  resize: none;
-}
-
-.extra-send-btn {
-  margin-top: 16px;
-  width: 100%;
-  padding: 12px;
-  border-radius: 14px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  background: linear-gradient(135deg, #38bdf8, #22d3ee);
-  color: #020617;
-}
-
-@media (max-width: 900px) {
-  .extra-two-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* FINAL SCROLL FIX */
-html,
-body {
-  height: auto;
-  overflow-y: auto;
-}
+  height:
