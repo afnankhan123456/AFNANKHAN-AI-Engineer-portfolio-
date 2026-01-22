@@ -96,14 +96,17 @@ body {
   display: block;
 }
 
-/* ABOUT CARD (FIXED ONLY HERE) */
+/* ================= ABOUT CARD (FINAL FIX) ================= */
 .about-card {
   padding: 42px;
   text-align: center;
-  max-width: 520px;       /* right side se chhota */
+
+  /* SAME WIDTH AS SKILLS + PROJECTS */
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
-/* about text sirf 3 lines */
+/* about text only 3 lines */
 .about-card p {
   display: -webkit-box;
   -webkit-line-clamp: 3;
