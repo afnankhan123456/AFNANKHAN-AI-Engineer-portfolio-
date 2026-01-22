@@ -5,20 +5,15 @@
   <title>AFNANKHAN | AI Engineer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
+<!-- ================= NAVBAR ================= -->
 <nav class="navbar glass">
 
-  <!-- LEFT : DATA SCIENCE LOGO (INLINE SVG – NO PNG NEEDED) -->
   <div class="nav-left ds-logo">
-    <svg
-      width="44"
-      height="44"
-      viewBox="0 0 120 120"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="44" height="44" viewBox="0 0 120 120">
       <circle cx="60" cy="60" r="8" fill="#00d4ff" />
-
       <g stroke="#00d4ff" stroke-width="3">
         <line x1="60" y1="60" x2="20" y2="30" />
         <line x1="60" y1="60" x2="100" y2="30" />
@@ -27,7 +22,6 @@
         <line x1="60" y1="60" x2="60" y2="10" />
         <line x1="60" y1="60" x2="60" y2="110" />
       </g>
-
       <g fill="#7dd3fc">
         <circle cx="20" cy="30" r="5" />
         <circle cx="100" cy="30" r="5" />
@@ -37,11 +31,9 @@
         <circle cx="60" cy="110" r="5" />
       </g>
     </svg>
-
     <span>DATA SCIENCE</span>
   </div>
 
-  <!-- CENTER -->
   <ul class="nav-center">
     <li>Home</li>
     <li>About</li>
@@ -49,21 +41,10 @@
     <li>Projects</li>
   </ul>
 
-  <!-- RIGHT -->
-  <div style="display:flex; gap:12px; align-items:center;">
-    <a
-      href="https://github.com/afnankhan123456?tab=repositories"
-      target="_blank"
-      class="resume-btn"
-      style="
-        background: rgba(255,255,255,0.08);
-        border: 1px solid rgba(255,255,255,0.2);
-      "
-    >
+  <div style="display:flex; gap:12px;">
+    <a href="https://github.com/afnankhan123456?tab=repositories" target="_blank" class="resume-btn">
       GitHub
     </a>
-
-    <!-- ✅ UPDATED RESUME LINK -->
     <a
       href="https://raw.githubusercontent.com/afnankhan123456/AFNANKHAN-AI-Engineer-portfolio-/main/Resume.pdf"
       target="_blank"
@@ -72,11 +53,7 @@
       Resume
     </a>
   </div>
-
 </nav>
-
-</body>
-</html>
 
 <!-- ================= ABOUT ================= -->
 <section class="top-about">
@@ -100,103 +77,59 @@
     </div>
 
   </div>
-</section>    
+</section>
+
 <!-- ================= MAIN ================= -->
 <section class="main-layout">
 
   <!-- SKILLS -->
   <div class="skills glass">
     <h2>Skills</h2>
-
     <div class="skill-list scroll-skills">
-
-      <div class="skill-item">
-        <span class="icon">🐍</span><span>Python</span>
-      </div>
-
-      <div class="skill-item">
-        <span class="icon">🤖</span><span>Machine Learning</span>
-      </div>
-
-      <div class="skill-item">
-        <span class="icon">🧠</span><span>Deep Learning</span>
-      </div>
-
-      <div class="skill-item">
-        <span class="icon">⚙️</span><span>Flask</span>
-      </div>
-
-      <div class="skill-item">
-        <span class="icon">📷</span><span>OpenCV</span>
-      </div>
-
-      <div class="skill-item">
-        <span class="icon">🔢</span><span>NumPy</span>
-      </div>
-
-      <div class="skill-item">
-        <span class="icon">📊</span><span>Pandas</span>
-      </div>
-
-      <div class="skill-item">
-        <span class="icon">📈</span><span>Matplotlib</span>
-      </div>
-
-      <div class="skill-item">
-        <span class="icon">🎨</span><span>Seaborn</span>
-      </div>
-
-      <div class="skill-item">
-        <span class="icon">🛢️</span><span>MySQL</span>
-      </div>
-
-      <div class="skill-item">
-        <span class="icon">📝</span><span>NLP</span>
-      </div>
-
+      <div class="skill-item"><span class="icon">🐍</span>Python</div>
+      <div class="skill-item"><span class="icon">🤖</span>Machine Learning</div>
+      <div class="skill-item"><span class="icon">🧠</span>Deep Learning</div>
+      <div class="skill-item"><span class="icon">⚙️</span>Flask</div>
+      <div class="skill-item"><span class="icon">📷</span>OpenCV</div>
+      <div class="skill-item"><span class="icon">🔢</span>NumPy</div>
+      <div class="skill-item"><span class="icon">📊</span>Pandas</div>
+      <div class="skill-item"><span class="icon">📈</span>Matplotlib</div>
+      <div class="skill-item"><span class="icon">🎨</span>Seaborn</div>
+      <div class="skill-item"><span class="icon">🛢️</span>MySQL</div>
+      <div class="skill-item"><span class="icon">📝</span>NLP</div>
     </div>
   </div>
 
-</section>
-
-  <!-- PROJECTS (FIXED) -->
+  <!-- PROJECTS -->
   <div class="projects glass">
     <h2>Projects</h2>
-
-    <!-- 🔥 VERTICAL SCROLL AREA -->
     <div class="project-list scroll-area">
-
       <div class="project-card">
         <h3>Emotion Detection</h3>
         <p>Real-time facial emotion detection using CNN & OpenCV.</p>
       </div>
-
       <div class="project-card">
         <h3>AI Chatbot</h3>
         <p>NLP based chatbot with Flask backend.</p>
       </div>
-
       <div class="project-card">
         <h3>Face Recognition</h3>
         <p>Deep learning based face recognition system.</p>
       </div>
-
       <div class="project-card">
         <h3>Fraud Detection</h3>
         <p>Banking fraud detection using Machine Learning.</p>
       </div>
-
       <div class="project-card">
         <h3>Fake News Detector</h3>
         <p>NLP based fake news classification model.</p>
       </div>
-
     </div>
   </div>
 
 </section>
 
-<!-- EXTRA -->
+<!-- ================= EXTRA ================= -->
 <section class="extra-two-cards">
 
   <div class="extra-card glass">
@@ -223,13 +156,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
